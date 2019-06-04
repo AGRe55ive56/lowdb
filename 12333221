@@ -1,0 +1,26 @@
+create table tb_price
+(
+  shop       NUMBER not null,
+  article    VARCHAR2(100) not null,
+  price      NUMBER not null,
+  VAT	       NUMBER not null,
+  SALE	 NUMBER,
+  ddeb       DATE not null,
+  dfin       DATE not null
+);
+-- Add comments to the columns 
+comment on column tb_price.shop
+  is 'Номер магазина';
+comment on column tb_price.article
+  is 'Код товара';
+comment on column tb_price.sale
+  is 'Суммарная Скидка';
+comment on column tb_price.price
+  is 'Цена';
+comment on column tb_price.vat
+  is 'НДС';
+comment on column tb_price.ddeb
+  is 'Дата начала действия цены';
+comment on column tb_price.dfin
+  is 'Дата окончания действия цены';
+
